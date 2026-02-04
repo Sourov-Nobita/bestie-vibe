@@ -1,0 +1,79 @@
+:root {
+  --bg: #0b0d12;
+  --fg: #ffffff;
+  --muted: #9aa0aa;
+  --accent: #5eead4;
+}
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: system-ui, -apple-system, BlinkMacSystemFont;
+}
+
+body {
+  background: var(--bg);
+  color: var(--fg);
+  min-height: 100vh;
+}
+
+/* NAV */
+.nav {
+  height: 64px;
+  padding: 0 20px;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+
+.logo {
+  font-weight: 700;
+  letter-spacing: 1px;
+}
+
+.menu {
+  font-size: 22px;
+}
+
+/* HERO */
+.container {
+  padding: 20px;
+}
+
+.hero h1 {
+  font-size: 2.4rem;
+  line-height: 1.1;
+  margin-top: 40px;
+}
+
+.hero p {
+  color: var(--muted);
+  margin: 16px 0 24px;
+  max-width: 320px;
+}
+
+.cta {
+  padding: 14px 28px;
+  border-radius: 999px;
+  border: none;
+  background: var(--accent);
+  color: #000;
+  font-weight: 600;
+}
+
+/* CARDS */
+.cards {
+  margin-top: 60px;
+  display: grid;
+  gap: 16px;
+}
+
+.card {
+  padding: 24px;
+  border-radius: 16px;
+  background: rgba(255,255,255,0.04);
+  backdrop-filter: blur(10px);
+  transform: translateY(20px);
+  opacity: 0;
+}
