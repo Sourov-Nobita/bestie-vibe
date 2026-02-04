@@ -3,18 +3,36 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>For Someone Special</title>
-    <link rel="stylesheet" href="style.css">
-</head>
+    <title>Infinity & Beyond | For My Bestie</title>
+    <link rel="stylesheet" href="css/style.css">
+    <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet"> </head>
 <body>
-    <canvas id="canvas1"></canvas>
-    
-    <div class="glass-card">
-        <h1 id="text">You Make My World Sparkle</h1>
-        <p>Every pixel here is coded with care, just like our bond.</p>
-        <button class="btn" onclick="celebrate()">Tap for Magic</button>
-    </div>
+    <audio id="bgMusic" loop>
+        <source src="assets/romantic-track.mp3" type="audio/mpeg">
+    </audio>
 
-    <script src="script.js"></script>
+    <div class="loader"><span>Loading Magic...</span></div>
+
+    <nav>
+        <div class="logo">OUR BOND</div>
+        <ul class="nav-links">
+            <li><a href="index.html">Home</a></li>
+            <li><a href="memories.html">Memories</a></li>
+            <li><a href="message.html">Message</a></li>
+        </ul>
+    </nav>
+
+    <section class="hero">
+        <canvas id="particleCanvas"></canvas>
+        <div class="hero-content" data-aos="zoom-in">
+            <img src="assets/bestie-profile.jpg" alt="Bestie" class="profile-img">
+            <h1>Hey [Name], You're Special</h1>
+            <p>Welcome to a space built only for you.</p>
+            <button class="cta-btn" onclick="startExperience()">Enter Her Heart</button>
+        </div>
+    </section>
+
+    <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
+    <script src="js/main.js"></script>
 </body>
 </html>
