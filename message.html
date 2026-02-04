@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>A Message For You</title>
+    <link rel="stylesheet" href="css/style.css">
+</head>
+<body class="message-page">
+    <div class="envelope-wrapper" onclick="openLetter()">
+        <div class="envelope">
+            <div class="letter">
+                <h3>Dear Bestie,</h3>
+                <p id="typing-text"></p>
+            </div>
+        </div>
+        <p class="instruction">Tap the envelope to read</p>
+    </div>
+
+    <script>
+        const text = "তুমি জানো কি, আমার জীবনে তোমার গুরুত্ব কতটা? এই ওয়েবসাইটটি শুধু কিছু কোড নয়, এটি আমাদের বন্ধুত্বের একটা ছোট প্রতিফলন। আমি চাই আমাদের এই বন্ডিং যেন চিরকাল এমন স্পেশাল থাকে...";
+        let i = 0;
+        function openLetter() {
+            document.querySelector('.envelope').classList.toggle('open');
+            if(i === 0) typeWriter();
+        }
+        function typeWriter() {
+            if (i < text.length) {
+                document.getElementById("typing-text").innerHTML += text.charAt(i);
+                i++;
+                setTimeout(typeWriter, 50);
+            }
+        }
+    </script>
+</body>
+</html>
